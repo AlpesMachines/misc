@@ -1,0 +1,672 @@
+EESchema Schematic File Version 4
+LIBS:main-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "MIDI to CV convertor"
+Date "2019-02-16"
+Rev "v02"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "Author: Jakub Horak"
+$EndDescr
+$Comp
+L main-rescue:ATTINY2313-P U3
+U 1 1 5C58A701
+P 3400 2750
+F 0 "U3" H 2450 3750 50  0000 C CNN
+F 1 "ATTINY2313-P" H 4200 1850 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm_Socket" H 3400 2750 50  0000 C CIN
+F 3 "" H 3400 2750 50  0000 C CNN
+	1    3400 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:6N137 U1
+U 1 1 5C58A8F0
+P 3450 5350
+F 0 "U1" H 3150 5850 60  0000 C CNN
+F 1 "6N137" H 3300 4850 60  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3450 5350 60  0001 C CNN
+F 3 "" H 3450 5350 60  0000 C CNN
+	1    3450 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:audio-jack J1
+U 1 1 5C58B15A
+P 7650 1500
+F 0 "J1" H 7240 1780 60  0000 C CNN
+F 1 "audio-jack" H 7440 1275 60  0000 C CNN
+F 2 "midi-to-cv:PJ-321" H 7650 1500 60  0001 C CNN
+F 3 "" H 7650 1500 60  0000 C CNN
+	1    7650 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L main-rescue:GND #PWR01
+U 1 1 5C58B422
+P 8200 1650
+F 0 "#PWR01" H 8200 1400 50  0001 C CNN
+F 1 "GND" H 8200 1500 50  0000 C CNN
+F 2 "" H 8200 1650 50  0000 C CNN
+F 3 "" H 8200 1650 50  0000 C CNN
+	1    8200 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:R R1
+U 1 1 5C58B719
+P 2050 1700
+F 0 "R1" V 2130 1700 50  0000 C CNN
+F 1 "10K" V 2050 1700 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1980 1700 50  0001 C CNN
+F 3 "" H 2050 1700 50  0000 C CNN
+	1    2050 1700
+	-1   0    0    1   
+$EndComp
+Text GLabel 1850 1950 0    60   Output ~ 0
+RST
+$Comp
+L main-rescue:Crystal Y1
+U 1 1 5C58BA1B
+P 1900 2350
+F 0 "Y1" H 1900 2500 50  0000 C CNN
+F 1 "16MHz" H 1900 2200 50  0000 C CNN
+F 2 "Crystal:Crystal_HC18-U_Vertical" H 1900 2350 50  0001 C CNN
+F 3 "" H 1900 2350 50  0000 C CNN
+	1    1900 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L main-rescue:C C1
+U 1 1 5C58C301
+P 1450 2200
+F 0 "C1" H 1475 2300 50  0000 L CNN
+F 1 "22p" H 1475 2100 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 1488 2050 50  0001 C CNN
+F 3 "" H 1450 2200 50  0000 C CNN
+	1    1450 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L main-rescue:C C2
+U 1 1 5C58C3A6
+P 1450 2500
+F 0 "C2" H 1475 2600 50  0000 L CNN
+F 1 "22p" H 1475 2400 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 1488 2350 50  0001 C CNN
+F 3 "" H 1450 2500 50  0000 C CNN
+	1    1450 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L main-rescue:GND #PWR02
+U 1 1 5C58C43B
+P 1100 2550
+F 0 "#PWR02" H 1100 2300 50  0001 C CNN
+F 1 "GND" H 1100 2400 50  0000 C CNN
+F 2 "" H 1100 2550 50  0000 C CNN
+F 3 "" H 1100 2550 50  0000 C CNN
+	1    1100 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:GND #PWR03
+U 1 1 5C58C598
+P 3400 3850
+F 0 "#PWR03" H 3400 3600 50  0001 C CNN
+F 1 "GND" H 3400 3700 50  0000 C CNN
+F 2 "" H 3400 3850 50  0000 C CNN
+F 3 "" H 3400 3850 50  0000 C CNN
+	1    3400 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:VCC #PWR04
+U 1 1 5C58C693
+P 2950 1000
+F 0 "#PWR04" H 2950 850 50  0001 C CNN
+F 1 "VCC" H 2950 1150 50  0000 C CNN
+F 2 "" H 2950 1000 50  0000 C CNN
+F 3 "" H 2950 1000 50  0000 C CNN
+	1    2950 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:C C3
+U 1 1 5C58C6C3
+P 2950 1300
+F 0 "C3" H 2975 1400 50  0000 L CNN
+F 1 "100n" H 2975 1200 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 2988 1150 50  0001 C CNN
+F 3 "" H 2950 1300 50  0000 C CNN
+	1    2950 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:R R4
+U 1 1 5C58C8C8
+P 4800 1950
+F 0 "R4" V 4880 1950 50  0000 C CNN
+F 1 "1K" V 4800 1950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4730 1950 50  0001 C CNN
+F 3 "" H 4800 1950 50  0000 C CNN
+	1    4800 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L main-rescue:LED D2
+U 1 1 5C58C907
+P 5200 1950
+F 0 "D2" H 5200 2050 50  0000 C CNN
+F 1 "LED" H 5200 1850 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 5200 1950 50  0001 C CNN
+F 3 "" H 5200 1950 50  0000 C CNN
+	1    5200 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L main-rescue:GND #PWR05
+U 1 1 5C58C956
+P 5450 1950
+F 0 "#PWR05" H 5450 1700 50  0001 C CNN
+F 1 "GND" H 5450 1800 50  0000 C CNN
+F 2 "" H 5450 1950 50  0000 C CNN
+F 3 "" H 5450 1950 50  0000 C CNN
+	1    5450 1950
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 2650 2    60   Input ~ 0
+SCK
+Text GLabel 5100 2550 2    60   Input Italic 0
+MISO
+Text GLabel 5100 2650 2    60   Input ~ 0
+DO
+Text GLabel 4650 2450 2    60   Input ~ 0
+MOSI
+Text GLabel 4650 3350 2    60   Input ~ 0
+TRIG
+Text GLabel 4650 3450 2    60   Input ~ 0
+~CS
+Text GLabel 4650 2850 2    60   Input ~ 0
+RX
+Text GLabel 4650 2950 2    60   Output ~ 0
+TX
+$Comp
+L main-rescue:DIN_5 J2
+U 1 1 5C58E17D
+P 1550 5350
+F 0 "J2" H 1550 5350 50  0000 C CNN
+F 1 "DIN_5" H 1550 5200 50  0000 C CNN
+F 2 "w_conn_av:din-5" H 1550 5350 50  0001 C CNN
+F 3 "" H 1550 5350 50  0000 C CNN
+	1    1550 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:MCP4921-E_P U2
+U 1 1 5C58E93D
+P 7250 3450
+F 0 "U2" H 6800 3750 50  0000 L CNN
+F 1 "MCP4921-E/P" H 7250 3750 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7250 3450 50  0001 C CIN
+F 3 "" H 7250 3450 50  0000 C CNN
+	1    7250 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:GND #PWR06
+U 1 1 5C58E9CC
+P 7150 3950
+F 0 "#PWR06" H 7150 3700 50  0001 C CNN
+F 1 "GND" H 7150 3800 50  0000 C CNN
+F 2 "" H 7150 3950 50  0000 C CNN
+F 3 "" H 7150 3950 50  0000 C CNN
+	1    7150 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:VCC #PWR07
+U 1 1 5C58EA04
+P 6950 2350
+F 0 "#PWR07" H 6950 2200 50  0001 C CNN
+F 1 "VCC" H 6950 2500 50  0000 C CNN
+F 2 "" H 6950 2350 50  0000 C CNN
+F 3 "" H 6950 2350 50  0000 C CNN
+	1    6950 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:VCC #PWR08
+U 1 1 5C58EA30
+P 7500 3950
+F 0 "#PWR08" H 7500 3800 50  0001 C CNN
+F 1 "VCC" H 7500 4100 50  0000 C CNN
+F 2 "" H 7500 3950 50  0000 C CNN
+F 3 "" H 7500 3950 50  0000 C CNN
+	1    7500 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:GND #PWR09
+U 1 1 5C58EA80
+P 6550 3550
+F 0 "#PWR09" H 6550 3300 50  0001 C CNN
+F 1 "GND" H 6550 3400 50  0000 C CNN
+F 2 "" H 6550 3550 50  0000 C CNN
+F 3 "" H 6550 3550 50  0000 C CNN
+	1    6550 3550
+	1    0    0    -1  
+$EndComp
+Text GLabel 6450 3250 0    60   Output ~ 0
+DO
+Text GLabel 6450 3350 0    60   Output ~ 0
+SCK
+Text GLabel 6450 3450 0    60   Output ~ 0
+~CS
+Text GLabel 7950 3450 2    60   Input ~ 0
+DACOUT
+Text GLabel 8300 1500 2    60   Output ~ 0
+DACOUT
+Text GLabel 8300 1350 2    60   Output ~ 0
+TRIG
+$Comp
+L main-rescue:GND #PWR010
+U 1 1 5C590544
+P 6950 2900
+F 0 "#PWR010" H 6950 2650 50  0001 C CNN
+F 1 "GND" H 6950 2750 50  0000 C CNN
+F 2 "" H 6950 2900 50  0000 C CNN
+F 3 "" H 6950 2900 50  0000 C CNN
+	1    6950 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:C C4
+U 1 1 5C5905F4
+P 6950 2650
+F 0 "C4" H 6975 2750 50  0000 L CNN
+F 1 "100n" H 6975 2550 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 6988 2500 50  0001 C CNN
+F 3 "" H 6950 2650 50  0000 C CNN
+	1    6950 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:R R2
+U 1 1 5C591117
+P 2250 5150
+F 0 "R2" V 2330 5150 50  0000 C CNN
+F 1 "220" V 2250 5150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2180 5150 50  0001 C CNN
+F 3 "" H 2250 5150 50  0000 C CNN
+	1    2250 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L main-rescue:DIODE D1
+U 1 1 5C5911A4
+P 2600 5350
+F 0 "D1" H 2600 5450 40  0000 C CNN
+F 1 "DIODE" H 2600 5250 40  0000 C CNN
+F 2 "Diode_THT:D_DO-15_P10.16mm_Horizontal" H 2600 5350 60  0001 C CNN
+F 3 "" H 2600 5350 60  0000 C CNN
+	1    2600 5350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L main-rescue:R R3
+U 1 1 5C591632
+P 4350 5050
+F 0 "R3" V 4430 5050 50  0000 C CNN
+F 1 "10K" V 4350 5050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4280 5050 50  0001 C CNN
+F 3 "" H 4350 5050 50  0000 C CNN
+	1    4350 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L main-rescue:VCC #PWR011
+U 1 1 5C591E58
+P 4100 4950
+F 0 "#PWR011" H 4100 4800 50  0001 C CNN
+F 1 "VCC" H 4100 5100 50  0000 C CNN
+F 2 "" H 4100 4950 50  0000 C CNN
+F 3 "" H 4100 4950 50  0000 C CNN
+	1    4100 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:GND #PWR012
+U 1 1 5C591ECC
+P 4100 5700
+F 0 "#PWR012" H 4100 5450 50  0001 C CNN
+F 1 "GND" H 4100 5550 50  0000 C CNN
+F 2 "" H 4100 5700 50  0000 C CNN
+F 3 "" H 4100 5700 50  0000 C CNN
+	1    4100 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:CONN_02X03 J4
+U 1 1 5C5927F8
+P 5900 5850
+F 0 "J4" H 5900 6050 50  0000 C CNN
+F 1 "ICSP" H 5900 5650 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 5900 4650 50  0001 C CNN
+F 3 "" H 5900 4650 50  0000 C CNN
+	1    5900 5850
+	1    0    0    -1  
+$EndComp
+Text GLabel 5600 5000 0    60   Input ~ 0
+RX
+Text GLabel 5600 5100 0    60   Output ~ 0
+TX
+Text GLabel 5550 5750 0    60   Output ~ 0
+MISO
+Text GLabel 6250 5850 2    60   Input ~ 0
+MOSI
+Text GLabel 5550 5850 0    60   Input ~ 0
+SCK
+Text GLabel 5550 5950 0    60   Input ~ 0
+RST
+$Comp
+L main-rescue:GND #PWR013
+U 1 1 5C593561
+P 6250 5950
+F 0 "#PWR013" H 6250 5700 50  0001 C CNN
+F 1 "GND" H 6250 5800 50  0000 C CNN
+F 2 "" H 6250 5950 50  0000 C CNN
+F 3 "" H 6250 5950 50  0000 C CNN
+	1    6250 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:VCC #PWR014
+U 1 1 5C5935AB
+P 6250 5750
+F 0 "#PWR014" H 6250 5600 50  0001 C CNN
+F 1 "VCC" H 6250 5900 50  0000 C CNN
+F 2 "" H 6250 5750 50  0000 C CNN
+F 3 "" H 6250 5750 50  0000 C CNN
+	1    6250 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:BARREL_JACK J5
+U 1 1 5C593ABD
+P 8150 5050
+F 0 "J5" H 8150 5300 50  0000 C CNN
+F 1 "5V" H 8150 4850 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 8150 5050 50  0001 C CNN
+F 3 "" H 8150 5050 50  0000 C CNN
+	1    8150 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:GND #PWR015
+U 1 1 5C593B16
+P 8550 5200
+F 0 "#PWR015" H 8550 4950 50  0001 C CNN
+F 1 "GND" H 8550 5050 50  0000 C CNN
+F 2 "" H 8550 5200 50  0000 C CNN
+F 3 "" H 8550 5200 50  0000 C CNN
+	1    8550 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:VCC #PWR016
+U 1 1 5C593B63
+P 8550 4950
+F 0 "#PWR016" H 8550 4800 50  0001 C CNN
+F 1 "VCC" H 8550 5100 50  0000 C CNN
+F 2 "" H 8550 4950 50  0000 C CNN
+F 3 "" H 8550 4950 50  0000 C CNN
+	1    8550 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:VCC #PWR017
+U 1 1 5C598C4D
+P 2050 1450
+F 0 "#PWR017" H 2050 1300 50  0001 C CNN
+F 1 "VCC" H 2050 1600 50  0000 C CNN
+F 2 "" H 2050 1450 50  0000 C CNN
+F 3 "" H 2050 1450 50  0000 C CNN
+	1    2050 1450
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 4900 1    60   Output ~ 0
+RX
+Wire Wire Line
+	2250 2250 2150 2250
+Wire Wire Line
+	2150 2250 2150 2200
+Wire Wire Line
+	2150 2200 1900 2200
+Wire Wire Line
+	2250 2450 2150 2450
+Wire Wire Line
+	2150 2450 2150 2500
+Wire Wire Line
+	2150 2500 1900 2500
+Connection ~ 1900 2200
+Connection ~ 1900 2500
+Wire Wire Line
+	1300 2200 1100 2200
+Wire Wire Line
+	1100 2200 1100 2500
+Wire Wire Line
+	1100 2500 1300 2500
+Wire Wire Line
+	1850 1950 2050 1950
+Wire Wire Line
+	2050 1950 2050 1850
+Connection ~ 2050 1950
+Wire Wire Line
+	2050 1450 2050 1550
+Wire Wire Line
+	2950 1000 2950 1100
+Wire Wire Line
+	2950 1100 3400 1100
+Wire Wire Line
+	3400 1100 3400 1650
+Wire Wire Line
+	4550 1950 4650 1950
+Wire Wire Line
+	4950 1950 5050 1950
+Wire Wire Line
+	5350 1950 5450 1950
+Wire Wire Line
+	4550 2450 4650 2450
+Wire Wire Line
+	4550 2550 5050 2550
+Wire Wire Line
+	5050 2550 5050 2650
+Wire Wire Line
+	5050 2650 5100 2650
+Connection ~ 5050 2550
+Wire Wire Line
+	4550 2650 4650 2650
+Wire Wire Line
+	4550 2850 4650 2850
+Wire Wire Line
+	4550 2950 4650 2950
+Wire Wire Line
+	4550 3350 4650 3350
+Wire Wire Line
+	4550 3450 4650 3450
+Wire Wire Line
+	6450 3250 6650 3250
+Wire Wire Line
+	6650 3350 6450 3350
+Wire Wire Line
+	6450 3450 6650 3450
+Wire Wire Line
+	6550 3550 6650 3550
+Wire Wire Line
+	7350 3850 7350 3950
+Wire Wire Line
+	7350 3950 7500 3950
+Wire Wire Line
+	7150 3850 7150 3950
+Wire Wire Line
+	7150 3050 7150 2450
+Wire Wire Line
+	6950 2800 6950 2900
+Wire Wire Line
+	7850 3450 7950 3450
+Wire Wire Line
+	8100 1350 8300 1350
+Wire Wire Line
+	8300 1500 8100 1500
+Wire Wire Line
+	8100 1650 8200 1650
+Wire Wire Line
+	8450 5150 8550 5150
+Wire Wire Line
+	8550 4950 8450 4950
+Wire Wire Line
+	6150 5750 6250 5750
+Wire Wire Line
+	6150 5850 6250 5850
+Wire Wire Line
+	6250 5950 6150 5950
+Wire Wire Line
+	5650 5750 5550 5750
+Wire Wire Line
+	5650 5850 5550 5850
+Wire Wire Line
+	5650 5950 5550 5950
+Wire Wire Line
+	1150 5150 1150 4900
+Wire Wire Line
+	1150 4900 2100 4900
+Wire Wire Line
+	2100 4900 2100 5150
+Wire Wire Line
+	2400 5150 2600 5150
+Wire Wire Line
+	2900 5150 2900 5200
+Connection ~ 2600 5150
+Wire Wire Line
+	2900 5550 2900 5500
+Wire Wire Line
+	2100 5550 2600 5550
+Wire Wire Line
+	2100 5250 2100 5550
+Wire Wire Line
+	2100 5250 1950 5250
+Wire Wire Line
+	1950 5250 1950 5150
+Connection ~ 2600 5550
+Wire Wire Line
+	4000 5050 4100 5050
+Wire Wire Line
+	4100 5050 4100 4950
+Connection ~ 4100 5050
+Wire Wire Line
+	4500 5050 4650 5050
+Wire Wire Line
+	4650 4900 4650 5050
+Wire Wire Line
+	4000 5700 4100 5700
+Wire Wire Line
+	4650 5500 4000 5500
+Connection ~ 4650 5050
+Wire Wire Line
+	5600 5000 5700 5000
+Wire Wire Line
+	5700 5100 5600 5100
+Wire Wire Line
+	3400 3750 3400 3850
+NoConn ~ 4550 2050
+NoConn ~ 4550 2150
+NoConn ~ 4550 2250
+NoConn ~ 4550 2350
+NoConn ~ 4550 3050
+NoConn ~ 4550 3150
+NoConn ~ 4550 3250
+$Comp
+L main-rescue:GND #PWR018
+U 1 1 5C5A1E24
+P 2950 1550
+F 0 "#PWR018" H 2950 1300 50  0001 C CNN
+F 1 "GND" H 2950 1400 50  0000 C CNN
+F 2 "" H 2950 1550 50  0000 C CNN
+F 3 "" H 2950 1550 50  0000 C CNN
+	1    2950 1550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4000 5200
+NoConn ~ 1150 5350
+NoConn ~ 1550 4950
+NoConn ~ 1950 5350
+Wire Wire Line
+	8450 5050 8550 5050
+Wire Wire Line
+	8550 5050 8550 5150
+Wire Wire Line
+	1900 2200 1600 2200
+Wire Wire Line
+	1900 2500 1600 2500
+Wire Wire Line
+	2050 1950 2250 1950
+Wire Wire Line
+	5050 2550 5100 2550
+Wire Wire Line
+	2600 5150 2900 5150
+Wire Wire Line
+	2600 5550 2900 5550
+Wire Wire Line
+	4100 5050 4200 5050
+Wire Wire Line
+	4650 5050 4650 5500
+Wire Wire Line
+	7150 2450 6950 2450
+Wire Wire Line
+	6950 2450 6950 2500
+Wire Wire Line
+	6950 2450 6950 2350
+Connection ~ 6950 2450
+Wire Wire Line
+	8550 5150 8550 5200
+Connection ~ 8550 5150
+Wire Wire Line
+	1100 2500 1100 2550
+Connection ~ 1100 2500
+Wire Wire Line
+	2950 1100 2950 1150
+Connection ~ 2950 1100
+Wire Wire Line
+	2950 1450 2950 1550
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 5C6B4F11
+P 5900 5100
+F 0 "J3" H 5979 5142 50  0000 L CNN
+F 1 "SERIAL" H 5979 5051 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5900 5100 50  0001 C CNN
+F 3 "~" H 5900 5100 50  0001 C CNN
+	1    5900 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L main-rescue:GND #PWR019
+U 1 1 5C6BAF62
+P 5600 5200
+F 0 "#PWR019" H 5600 4950 50  0001 C CNN
+F 1 "GND" H 5605 5027 50  0000 C CNN
+F 2 "" H 5600 5200 50  0000 C CNN
+F 3 "" H 5600 5200 50  0000 C CNN
+	1    5600 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 5200 5700 5200
+$EndSCHEMATC
