@@ -1,0 +1,36 @@
+- synth
+	. write function (set_parameter) to change synth parameters
+		. move some data from synth state to patch
+		. use _inc and other parameters from patch, not synth
+	. distinguish between synth and drum channel (only drum has wobbly crunchines, synth has just noise ratio)
+	. assembly
+		. write assembly routines for common operations (saturation add for instance)
+		. use assembly routines
+        * add two channel output
+	. add portamento/glide
+	* add volume overdrive
+	. add patch saving/loading
+- waveforms
+	* generate waveforms from bin files
+	* make table of waveforms
+	* make selectable waveforms
+		* selector: button on akai
+	. PPG waveforms?
+	. DSGW waveforms?
+- envelopes
+	. maybe: use the same data format for envelopes (but -128)
+	* make envelope selector
+	* make mod-envelope selector
+- midi
+	* redirect current midi input to console channel
+	/ change console channel on midi activity
+		=> those two modes are not really compatible
+- filter
+	* add filter sw support
+	* add conversion function filter val to expval
+	* add support for pt8211
+	* check division gets converted
+- modulation
+        . add conversion table for pitch modulation, do u16*u8 -> u24 mul
+- optimization ideas:
+	- change the loop: instead `for samples for chan` use `for chan for samples` so pointers are not loaded every cycle
