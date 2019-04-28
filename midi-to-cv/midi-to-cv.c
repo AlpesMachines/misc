@@ -16,8 +16,8 @@
 #include "mcp4921.h"
 
 enum {
-	PinTrig = 5,
-	PinLed = 8,
+	PinTrig = 4,
+	PinLed = 5,
 };
 
 enum {

@@ -1,4 +1,4 @@
 (fp_lib_table
-  (lib (name midi-to-cv)(type KiCad)(uri /home/thement/kicad/midi-to-cv)(options "")(descr ""))
+  (lib (name midi-to-cv)(type KiCad)(uri /home/thement/mumu/avr/attiny2313_midi-to-cv/hardware)(options "")(descr ""))
   (lib (name w_conn_av)(type Legacy)(uri /home/thement/kicad/w_conn_av.mod)(options "")(descr ""))
 )

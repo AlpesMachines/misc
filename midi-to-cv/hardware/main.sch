@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "MIDI to CV convertor"
-Date "2019-02-16"
-Rev "v02"
+Date "2019-03-18"
+Rev "v03"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -64,7 +64,7 @@ U 1 1 5C58B719
 P 2050 1700
 F 0 "R1" V 2130 1700 50  0000 C CNN
 F 1 "10K" V 2050 1700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1980 1700 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1980 1700 50  0001 C CNN
 F 3 "" H 2050 1700 50  0000 C CNN
 	1    2050 1700
 	-1   0    0    1   
@@ -143,7 +143,7 @@ U 1 1 5C58C6C3
 P 2950 1300
 F 0 "C3" H 2975 1400 50  0000 L CNN
 F 1 "100n" H 2975 1200 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 2988 1150 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 2988 1150 50  0001 C CNN
 F 3 "" H 2950 1300 50  0000 C CNN
 	1    2950 1300
 	1    0    0    -1  
@@ -151,34 +151,34 @@ $EndComp
 $Comp
 L main-rescue:R R4
 U 1 1 5C58C8C8
-P 4800 1950
-F 0 "R4" V 4880 1950 50  0000 C CNN
-F 1 "1K" V 4800 1950 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4730 1950 50  0001 C CNN
-F 3 "" H 4800 1950 50  0000 C CNN
-	1    4800 1950
+P 4900 3350
+F 0 "R4" V 4980 3350 50  0000 C CNN
+F 1 "1K" V 4900 3350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4830 3350 50  0001 C CNN
+F 3 "" H 4900 3350 50  0000 C CNN
+	1    4900 3350
 	0    1    1    0   
 $EndComp
 $Comp
 L main-rescue:LED D2
 U 1 1 5C58C907
-P 5200 1950
-F 0 "D2" H 5200 2050 50  0000 C CNN
-F 1 "LED" H 5200 1850 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm" H 5200 1950 50  0001 C CNN
-F 3 "" H 5200 1950 50  0000 C CNN
-	1    5200 1950
+P 5300 3350
+F 0 "D2" H 5300 3450 50  0000 C CNN
+F 1 "LED" H 5300 3250 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 5300 3350 50  0001 C CNN
+F 3 "" H 5300 3350 50  0000 C CNN
+	1    5300 3350
 	-1   0    0    1   
 $EndComp
 $Comp
 L main-rescue:GND #PWR05
 U 1 1 5C58C956
-P 5450 1950
-F 0 "#PWR05" H 5450 1700 50  0001 C CNN
-F 1 "GND" H 5450 1800 50  0000 C CNN
-F 2 "" H 5450 1950 50  0000 C CNN
-F 3 "" H 5450 1950 50  0000 C CNN
-	1    5450 1950
+P 5550 3350
+F 0 "#PWR05" H 5550 3100 50  0001 C CNN
+F 1 "GND" H 5550 3200 50  0000 C CNN
+F 2 "" H 5550 3350 50  0000 C CNN
+F 3 "" H 5550 3350 50  0000 C CNN
+	1    5550 3350
 	1    0    0    -1  
 $EndComp
 Text GLabel 4650 2650 2    60   Input ~ 0
@@ -189,7 +189,7 @@ Text GLabel 5100 2650 2    60   Input ~ 0
 DO
 Text GLabel 4650 2450 2    60   Input ~ 0
 MOSI
-Text GLabel 4650 3350 2    60   Input ~ 0
+Text GLabel 4700 3250 2    60   Input ~ 0
 TRIG
 Text GLabel 4650 3450 2    60   Input ~ 0
 ~CS
@@ -292,7 +292,7 @@ U 1 1 5C5905F4
 P 6950 2650
 F 0 "C4" H 6975 2750 50  0000 L CNN
 F 1 "100n" H 6975 2550 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 6988 2500 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 6988 2500 50  0001 C CNN
 F 3 "" H 6950 2650 50  0000 C CNN
 	1    6950 2650
 	1    0    0    -1  
@@ -303,7 +303,7 @@ U 1 1 5C591117
 P 2250 5150
 F 0 "R2" V 2330 5150 50  0000 C CNN
 F 1 "220" V 2250 5150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2180 5150 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2180 5150 50  0001 C CNN
 F 3 "" H 2250 5150 50  0000 C CNN
 	1    2250 5150
 	0    1    1    0   
@@ -314,7 +314,7 @@ U 1 1 5C5911A4
 P 2600 5350
 F 0 "D1" H 2600 5450 40  0000 C CNN
 F 1 "DIODE" H 2600 5250 40  0000 C CNN
-F 2 "Diode_THT:D_DO-15_P10.16mm_Horizontal" H 2600 5350 60  0001 C CNN
+F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 2600 5350 60  0001 C CNN
 F 3 "" H 2600 5350 60  0000 C CNN
 	1    2600 5350
 	0    -1   -1   0   
@@ -325,7 +325,7 @@ U 1 1 5C591632
 P 4350 5050
 F 0 "R3" V 4430 5050 50  0000 C CNN
 F 1 "10K" V 4350 5050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4280 5050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4280 5050 50  0001 C CNN
 F 3 "" H 4350 5050 50  0000 C CNN
 	1    4350 5050
 	0    1    1    0   
@@ -398,36 +398,25 @@ F 3 "" H 6250 5750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L main-rescue:BARREL_JACK J5
-U 1 1 5C593ABD
-P 8150 5050
-F 0 "J5" H 8150 5300 50  0000 C CNN
-F 1 "5V" H 8150 4850 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 8150 5050 50  0001 C CNN
-F 3 "" H 8150 5050 50  0000 C CNN
-	1    8150 5050
-	1    0    0    -1  
-$EndComp
-$Comp
 L main-rescue:GND #PWR015
 U 1 1 5C593B16
-P 8550 5200
-F 0 "#PWR015" H 8550 4950 50  0001 C CNN
-F 1 "GND" H 8550 5050 50  0000 C CNN
-F 2 "" H 8550 5200 50  0000 C CNN
-F 3 "" H 8550 5200 50  0000 C CNN
-	1    8550 5200
+P 8050 5400
+F 0 "#PWR015" H 8050 5150 50  0001 C CNN
+F 1 "GND" H 8050 5250 50  0000 C CNN
+F 2 "" H 8050 5400 50  0000 C CNN
+F 3 "" H 8050 5400 50  0000 C CNN
+	1    8050 5400
 	1    0    0    -1  
 $EndComp
 $Comp
 L main-rescue:VCC #PWR016
 U 1 1 5C593B63
-P 8550 4950
-F 0 "#PWR016" H 8550 4800 50  0001 C CNN
-F 1 "VCC" H 8550 5100 50  0000 C CNN
-F 2 "" H 8550 4950 50  0000 C CNN
-F 3 "" H 8550 4950 50  0000 C CNN
-	1    8550 4950
+P 8050 4800
+F 0 "#PWR016" H 8050 4650 50  0001 C CNN
+F 1 "VCC" H 8050 4950 50  0000 C CNN
+F 2 "" H 8050 4800 50  0000 C CNN
+F 3 "" H 8050 4800 50  0000 C CNN
+	1    8050 4800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -477,11 +466,9 @@ Wire Wire Line
 Wire Wire Line
 	3400 1100 3400 1650
 Wire Wire Line
-	4550 1950 4650 1950
+	5050 3350 5150 3350
 Wire Wire Line
-	4950 1950 5050 1950
-Wire Wire Line
-	5350 1950 5450 1950
+	5450 3350 5550 3350
 Wire Wire Line
 	4550 2450 4650 2450
 Wire Wire Line
@@ -497,8 +484,6 @@ Wire Wire Line
 	4550 2850 4650 2850
 Wire Wire Line
 	4550 2950 4650 2950
-Wire Wire Line
-	4550 3350 4650 3350
 Wire Wire Line
 	4550 3450 4650 3450
 Wire Wire Line
@@ -527,10 +512,6 @@ Wire Wire Line
 	8300 1500 8100 1500
 Wire Wire Line
 	8100 1650 8200 1650
-Wire Wire Line
-	8450 5150 8550 5150
-Wire Wire Line
-	8550 4950 8450 4950
 Wire Wire Line
 	6150 5750 6250 5750
 Wire Wire Line
@@ -591,7 +572,6 @@ NoConn ~ 4550 2250
 NoConn ~ 4550 2350
 NoConn ~ 4550 3050
 NoConn ~ 4550 3150
-NoConn ~ 4550 3250
 $Comp
 L main-rescue:GND #PWR018
 U 1 1 5C5A1E24
@@ -607,10 +587,6 @@ NoConn ~ 4000 5200
 NoConn ~ 1150 5350
 NoConn ~ 1550 4950
 NoConn ~ 1950 5350
-Wire Wire Line
-	8450 5050 8550 5050
-Wire Wire Line
-	8550 5050 8550 5150
 Wire Wire Line
 	1900 2200 1600 2200
 Wire Wire Line
@@ -634,9 +610,6 @@ Wire Wire Line
 Wire Wire Line
 	6950 2450 6950 2350
 Connection ~ 6950 2450
-Wire Wire Line
-	8550 5150 8550 5200
-Connection ~ 8550 5150
 Wire Wire Line
 	1100 2500 1100 2550
 Connection ~ 1100 2500
@@ -669,4 +642,72 @@ F 3 "" H 5600 5200 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	5600 5200 5700 5200
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5C90C039
+P 9000 3350
+F 0 "H3" H 9100 3396 50  0000 L CNN
+F 1 "MountingHole" H 9100 3305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9000 3350 50  0001 C CNN
+F 3 "~" H 9000 3350 50  0001 C CNN
+	1    9000 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5C90C100
+P 9000 3600
+F 0 "H4" H 9100 3646 50  0000 L CNN
+F 1 "MountingHole" H 9100 3555 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9000 3600 50  0001 C CNN
+F 3 "~" H 9000 3600 50  0001 C CNN
+	1    9000 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 5C90C1B2
+P 9000 3850
+F 0 "H5" H 9100 3896 50  0000 L CNN
+F 1 "MountingHole" H 9100 3805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9000 3850 50  0001 C CNN
+F 3 "~" H 9000 3850 50  0001 C CNN
+	1    9000 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 5C90C245
+P 9000 4100
+F 0 "H6" H 9100 4146 50  0000 L CNN
+F 1 "MountingHole" H 9100 4055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9000 4100 50  0001 C CNN
+F 3 "~" H 9000 4100 50  0001 C CNN
+	1    9000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J5
+U 1 1 5C904956
+P 8550 5150
+F 0 "J5" H 8656 5328 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 8656 5237 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 8550 5150 50  0001 C CNN
+F 3 "~" H 8550 5150 50  0001 C CNN
+	1    8550 5150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8050 4800 8050 5050
+Wire Wire Line
+	8050 5150 8050 5400
+Wire Wire Line
+	4550 3350 4750 3350
+Wire Wire Line
+	4550 3250 4700 3250
+NoConn ~ 4550 1950
+Wire Wire Line
+	8050 5150 8350 5150
+Wire Wire Line
+	8050 5050 8350 5050
 $EndSCHEMATC
